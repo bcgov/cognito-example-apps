@@ -51,6 +51,7 @@ const initExpresss = async () => {
         res.redirect(authUrl);
       }
     } catch (err) {
+      console.error(err);
       res.json({ success: false, error: err.message || err });
     }
   });
@@ -79,6 +80,7 @@ const initExpresss = async () => {
 
       res.redirect('/');
     } catch (err) {
+      console.error(err);
       res.json({ success: false, error: err.message || err });
     }
   });
@@ -91,6 +93,7 @@ const initExpresss = async () => {
 
       res.redirect('/');
     } catch (err) {
+      console.error(err);
       res.json({ success: false, error: err.message || err });
     }
   });
