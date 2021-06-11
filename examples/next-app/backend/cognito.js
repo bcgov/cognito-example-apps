@@ -3,6 +3,7 @@ const qs = require('qs');
 
 const {
   COGNITO_CLIENT_ID,
+  COGNITO_CLIENT_SECRET,
   COGNITO_DOMAIN_NAME_URL,
   COGNITO_LOGIN_GRANT_TYPE,
   COGNITO_LOGIN_REDIRECT_URL,
@@ -10,6 +11,8 @@ const {
   COGNITO_LOGIN_SCOPE,
   COGNITO_LOGOUT_REDIRECT_URL,
 } = require('./config');
+
+const btoa = (string) => Buffer.from(string).toString('base64');
 
 const decodeValue = (base64String) => {
   try {
@@ -49,6 +52,7 @@ const getAuthorizationUrl = async ({ identity_provider } = {}) => {
 };
 
 // see https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.3
+// see https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/
 const getAccessToken = async ({ code }) => {
   const url = `${COGNITO_DOMAIN_NAME_URL}/oauth2/token`;
 
@@ -69,11 +73,17 @@ const getAccessToken = async ({ code }) => {
   //   expires_in: 3600,
   //   token_type: "Bearer",
   // };
-  const { data } = await axios({
+  const config = {
     url,
     method: 'post',
     data: qs.stringify(params),
-  });
+  };
+
+  if (COGNITO_CLIENT_SECRET) {
+    config.headers = { Authorization: `Basic ${btoa(`${COGNITO_CLIENT_ID}:${COGNITO_CLIENT_SECRET}`)}` };
+  }
+
+  const { data } = await axios(config);
 
   const { id_token, access_token, refresh_token } = data;
 
