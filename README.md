@@ -13,8 +13,8 @@ An example [Next.js](https://nextjs.org/) application to connect to Cognito App 
 - Local development environment w/o Docker
 
 1. Go to `examples/next-app`.
-1. Copy `.env.local` to `.env`,
-1. Set environment variables in `.env`.
+1. Copy `.env.example` to `.env.local`,
+1. Set environment variables in `.env.local`.
 1. Run the development server:
 
 ```sh
@@ -25,12 +25,15 @@ An example [Next.js](https://nextjs.org/) application to connect to Cognito App 
 - Docker based local development environment
 
 1. Go to `examples/next-app`
-1. Set environment variables in `environment` section of `docker-compose.yml`.
+1. Copy `.env.example` to `.env`,
+1. Set environment variables in `.env`.
 1. Run the `docker-compose` file:
 
 ```sh
     docker-compose up
 ```
+
+- Docker Compose sources environment variables from a `.env` file located next to the docker-compose.yml file.
 
 ## How to Contribute
 
