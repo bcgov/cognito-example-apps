@@ -1,0 +1,11 @@
+export const HOSTNAME = process.env.HOST || '0.0.0.0';
+export const PORT = process.env.PORT || 3000;
+export const COGNITO_CLIENT_ID = process.env.COGNITO_CLIENT_ID || '';
+export const COGNITO_CLIENT_SECRET = process.env.COGNITO_CLIENT_SECRET || '';
+export const COGNITO_DOMAIN_NAME_URL = process.env.COGNITO_DOMAIN_NAME_URL || '';
+export const COGNITO_LOGIN_GRANT_TYPE = process.env.COGNITO_LOGIN_GRANT_TYPE || '';
+export const COGNITO_LOGIN_REDIRECT_URL = process.env.COGNITO_LOGIN_REDIRECT_URL || '';
+export const COGNITO_LOGIN_RESPONSE_TYPE = process.env.COGNITO_LOGIN_RESPONSE_TYPE || '';
+export const COGNITO_LOGIN_SCOPE = process.env.COGNITO_LOGIN_SCOPE || '';
+export const COGNITO_LOGOUT_REDIRECT_URL = process.env.COGNITO_LOGOUT_REDIRECT_URL || '';
+export const JWT_SECRET = process.env.JWT_SECRET || 'verysecuresecret';
