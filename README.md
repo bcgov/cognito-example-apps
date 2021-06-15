@@ -35,6 +35,13 @@ An example [Next.js](https://nextjs.org/) application to connect to Cognito App 
 
 - Docker Compose sources environment variables from a `.env` file located next to the docker-compose.yml file.
 
+## Next-App-JWT
+
+An example [Next.js](https://nextjs.org/) application to connect to Cognito App client using JWT (JSON Web Token).
+
+- located in [examples/next-app-jwt](examples/next-app) directory.
+- the setup process is the same as `Next-App`.
+
 ## How to Contribute
 
 If you would like to contribute, please see our [CONTRIBUTING](./CONTRIBUTING.md) guidelines.
