@@ -33,6 +33,15 @@ We used the following criteria to evaluate them:
   - https://aws.amazon.com/blogs/security/how-to-add-authentication-single-page-web-application-with-amazon-cognito-oauth2-implementation/
   - https://developer.okta.com/blog/2019/08/22/okta-authjs-pkce
 
+## Java Application Resources
+
+- https://docs.payara.fish/community/docs/5.201/documentation/payara-server/public-api/openid-connect-support.html
+- https://connect2id.com/products/nimbus-oauth-openid-connect-sdk
+- https://connect2id.com/products/nimbus-jose-jwt
+- https://github.com/bcgov/moh-keycloak-user-management/blob/master/backend/src/main/java/ca/bc/gov/hlth/mohums/security/SecurityConfig.java
+- https://github.com/bcgov/moh-hnclient-v2/blob/main/hnclient-v2/src/main/java/ca/bc/gov/hlth/hnclientv2/authentication/RetrieveAccessToken.java
+- https://github.com/bcgov/moh-hni-esb/blob/main/hnsecure/src/main/java/ca/bc/gov/hlth/hnsecure/validation/TokenValidator.java
+
 ## References
 
 - https://datatracker.ietf.org/doc/html/rfc6749
