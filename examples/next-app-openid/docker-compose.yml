@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: example_next_app_openid
+    stdin_open: true
+    ports:
+      - '3000:3000'
+    environment:
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+      - COGNITO_REGION=${COGNITO_REGION}
+      - COGNITO_USER_POOL_ID=${COGNITO_USER_POOL_ID}
+      - COGNITO_CLIENT_ID=${COGNITO_CLIENT_ID}
+      - COGNITO_CLIENT_SECRET=${COGNITO_CLIENT_SECRET}
+      - COGNITO_LOGIN_REDIRECT_URL=${COGNITO_LOGIN_REDIRECT_URL}
+      - COGNITO_LOGIN_RESPONSE_TYPE=${COGNITO_LOGIN_RESPONSE_TYPE}
+      - COOKIE_SESSION_NAME=${COOKIE_SESSION_NAME}
+      - COOKIE_SESSION_SECRET=${COOKIE_SESSION_SECRET}

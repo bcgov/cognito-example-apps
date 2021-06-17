@@ -39,8 +39,46 @@ An example [Next.js](https://nextjs.org/) application to connect to Cognito App 
 
 An example [Next.js](https://nextjs.org/) application to connect to Cognito App client using JWT (JSON Web Token).
 
-- located in [examples/next-app-jwt](examples/next-app) directory.
+- located in [examples/next-app-jwt](examples/next-app-jwt) directory.
 - the setup process is the same as `Next-App`.
+
+## Next-App-Openid
+
+An example [Next.js](https://nextjs.org/) application to connect to Cognito App client using `openid-client`, which is a server side OpenID Relying Party.
+
+- located in [examples/next-app-openid](examples/next-app-openid) directory.
+- the setup process is the same as `Next-App`.
+
+## React-App-Amplify
+
+This is an example [React.js](https://reactjs.org/) application to connect to Cognito App client on client side using Amplify library.
+
+- located in [examples/react-app-amplify](examples/react-app-amplify) directory.
+
+### How to run
+
+- Local development environment w/o Docker
+
+1. Go to `examples/react-app-amplify`.
+1. Copy `src/aws-exports.js.sample` to `src/aws-exports.js`,
+1. Set values in `src/aws-exports.js`.
+1. Run the development server:
+
+```sh
+    yarn install
+    yarn start
+```
+
+- Docker based local development environment
+
+1. Go to `examples/react-app-amplify`.
+1. Copy `src/aws-exports.js.sample` to `src/aws-exports.js`,
+1. Set values in `src/aws-exports.js`.
+1. Run the `docker-compose` file:
+
+```sh
+    docker-compose up
+```
 
 ## How to Contribute
 
