@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: example_next_app_pkce
+    stdin_open: true
+    ports:
+      - '3000:3000'
+    environment:
+      - HOSTNAME=0.0.0.0
+      - PORT=3000

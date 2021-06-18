@@ -80,6 +80,13 @@ This is an example [React.js](https://reactjs.org/) application to connect to Co
     docker-compose up
 ```
 
+## Next-App-PKCE
+
+An example [React.js](https://reactjs.org/) application to connect to Cognito App client respecting OAuth 2.0 Authorization Code with PKCE Flow.
+
+- located in [examples/next-app-pkce](examples/next-app-pkce) directory.
+- the setup process is the same as `React-App-Amplify`.
+
 ## How to Contribute
 
 If you would like to contribute, please see our [CONTRIBUTING](./CONTRIBUTING.md) guidelines.
