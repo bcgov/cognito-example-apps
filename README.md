@@ -1,5 +1,7 @@
 # cognito_example_client_app
 
+![Lifecycle:Stable](https://img.shields.io/badge/Lifecycle-Stable-97ca00)
+
 This repository contains client applications that can be used to test an app client in the BC Gov Cognito SSO Shared Service.
 
 ## Next-App
